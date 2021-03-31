@@ -47,3 +47,5 @@ auto generate html file need to install package and setup in webpack.config.js
 ```
 npm install --save-dev html-webpack-plugin
 ```
+
+multiple output: https://webpack.js.org/guides/output-management/ 

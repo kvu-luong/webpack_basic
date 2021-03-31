@@ -3,14 +3,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	mode: 'none',
-	entry: './src/index.js',
+	// entry: './src/index.js',
+	entry:{
+		index: './src/index.js',
+		print: './src/print.js'
+	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: 'test render html file',
 		}),
 	],
 	output: {
-		filename: 'main.js',
+		// filename: 'main.js',
+		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, 'dist')
 	},
 	module: {
@@ -35,6 +40,11 @@ module.exports = {
 				test: /\.(png|svg|jpg|jpeg|gif)$/i,
 				type: 'asset/resource',
 			},
+			{
+				// loading fonts
+		        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+		        type: 'asset/resource',
+		      },
 		],
 	},
 }
