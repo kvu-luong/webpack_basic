@@ -49,3 +49,14 @@ npm install --save-dev html-webpack-plugin
 ```
 
 multiple output: https://webpack.js.org/guides/output-management/ 
+
+set development server 
+```
+	npm install --save-dev webpack-dev-server
+```
+then add script in package.json
+"start": "webpack serve --open"
+
+then add setup in webpack.config.js
+localhost:8080
+
