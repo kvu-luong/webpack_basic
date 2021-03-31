@@ -2,7 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	mode: 'none',
+	mode: 'development',
+	devtool: 'inline-source-map',
 	// entry: './src/index.js',
 	entry:{
 		index: './src/index.js',
