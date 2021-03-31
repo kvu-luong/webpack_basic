@@ -23,3 +23,24 @@ npx webpack --config webpack.config.js
 package.json 
 "build": "webpack"
 => run ``` npm run build ```
+
+Start cover css
+```
+npm install --save-dev style-loader css-loader
+```
+
+***
+Change name of class css in html ```css-loader```
+```
+	options: {
+			        modules: {
+			        	// auto: true, if turn it one = true , it's mean the name of css class will not change
+			          	localIdentName: "[path][name]__[local]--[hash:base64:5]",//change the name of css class with specific format ( auto = false)
+			         },
+		        },
+```
+
+auto generate html file need to install package and setup in webpack.config.js
+```
+npm install --save-dev html-webpack-plugin
+```
